@@ -20,8 +20,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <a href="index.html" class="navbar-brand">LOGO is here Control</a>
                 </button>
+                <a href="index.html" class="navbar-brand">LOGO</a>
             </div>
             <!--/.mobile version Logo-->
             <!--descktop navigation bar-->
@@ -31,14 +31,25 @@
                     <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Main Panel</a></li>
                     <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;User Panel</a></li>
                     <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Contain Panel</a></li>
-                    <li><a href="tag.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tag</a></li>
+
                 </ul>
                 <!--Search bar-->
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+							<button type="reset" class="btn btn-default">
+								<span class="glyphicon glyphicon-remove">
+									<span class="sr-only">Close</span>
+                        </span>
+                        </button>
+                        <button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search</span>
+								</span>
+							</button>
+                        </span>
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
                 </form>
                 <!--/.Search bar-->
                 <!--DropDown bar-->
@@ -80,51 +91,83 @@
                 </div>
                 <!--/.Updates, Info-->
                 <!--Main Control Panel Summery-->
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="glyphicon glyphicon-list"></span>  Control Panel Summery
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Summary</th>
+                                            <th>Today</th>
+                                            <th>Yesterday</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Members</th>
+                                            <td>200</td>
+                                            <td>400</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Events</th>
+                                            <td>4100</td>
+                                            <td>5112</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Budget</th>
+                                            <td>1540</td>
+                                            <td>4511</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Contact</th>
+                                            <td>150</td>
+                                            <td>110</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/.Main Control Panel Summery-->
+
+                    <!--Load Line Chart Chart.js for Summery-->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="glyphicon glyphicon-list"></span>  Event Summary
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <!--Chart.js request the convas-->
+                                <canvas id="myChart1" class="col-md-12"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Load Chart.js for Summery-->
+                </div>
+                <!--Load Polar Chart Chart.js for Summery-->
                 <div class="col-md-6">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                <span class="glyphicon glyphicon-list"></span>  Control Panel Summery
+                                <span class="glyphicon glyphicon-leaf"></span>  Training Summary
                             </h3>
-
                         </div>
                         <div class="panel-body">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Summary</th>
-                                        <th>Today</th>
-                                        <th>Yesterday</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Members</th>
-                                        <td>200</td>
-                                        <td>400</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Events</th>
-                                        <td>4100</td>
-                                        <td>5112</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Budget</th>
-                                        <td>1540</td>
-                                        <td>4511</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Contact</th>
-                                        <td>150</td>
-                                        <td>110</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <!--Chart.js request the convas-->
+                            <canvas id="myChart2" class="col-md-12"></canvas>
                         </div>
                     </div>
                 </div>
-
-                <!--/.Main Control Panel Summery-->
+                <!--/.Load Polar Chart.js for Summery-->
 
                 <!--Upcoming Events Widge-->
                 <div class="col-md-6">
@@ -210,16 +253,77 @@
                     <!-- End fluid width widget -->
                 </div>
                 <!--/.Upcoming Events Widge-->
+                <!--Last Part-->
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Making Progress</div>
+                        <div class="panel-body">
+                            <!--Load Bar Chart Chart.js for Summery-->
+                            <div class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <span class="glyphicon glyphicon-leaf"></span> Improvment
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <!--Chart.js request the convas-->
+                                        <canvas id="myChart3" class="col-md-12"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Load Bar Chart.js for Summery-->
+                            <!--Message Board-->
+                            <div class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <span class="glyphicon glyphicon-leaf"></span>Message
+                                        </h3>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="text1">Leave a Message</label>
+                                            <textarea class="form-control" id="text1" rows="5" cols="10" placeholder="Message"></textarea>
+                                            <button type="submit" class="btn btn-default mar_t15">Contact</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <!--/.Message Board-->
+                        </div>
+                    </div>
+                </div>
+                <!--Last Part-->
+
             </div>
         </div>
     </div>
     <!--/.Main Contain Area-->
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Copyright&nbsp;©&nbsp;2017&nbsp;&nbsp;www.XXXXX.com&nbsp;&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+
     <!--Load jQuery-->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <!--Load Chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!--Load Bootstrap.js-->
     <script src="js/bootstrap.min.js"></script>
+    <!--Load Main js-->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
